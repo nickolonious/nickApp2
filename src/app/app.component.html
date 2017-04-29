@@ -1,4 +1,36 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+  <md-toolbar color="primary">
+   <div class="navToggle" (click)="sidenav.toggle()">
+      <md-icon>menu</md-icon>
+  </div>
+  <span style='margin-left: 20px;'>Nick Muscara</span>
+</md-toolbar>
+    <md-sidenav #sidenav mode="side"  >
+      <ul class="mainNav">         
+        <li (click)="sidenav.toggle()"  [routerLink]="['/app-home']">
+         <md-icon>home</md-icon>
+        Home</li>
+        <li (click)="sidenav.toggle()" [routerLink]="['/app-blog']">
+        <md-icon>book</md-icon>
+        Blog</li>
+        <li (click)="sidenav.toggle()" [routerLink]="['/app-contact']">
+         <md-icon>phone in talk</md-icon>
+        Contact</li>
+        <li (click)="sidenav.toggle()" [routerLink]="['/app-aboutme']">
+         <md-icon>person</md-icon>
+        About Me</li>
+        <li (click)="sidenav.toggle()" [routerLink]="['/app-changelog']">
+          <md-icon>assignment</md-icon>
+        Changelog</li>
+        <li (click)="sidenav.toggle()" [routerLink]="['/app-records']">
+          <md-icon>headset</md-icon>
+        Records</li>
+        <li (click)="sidenav.toggle()" [routerLink]="['/app-wishlist']">
+          <md-icon>redeem</md-icon>
+        Wish List</li>
+      </ul>
+    </md-sidenav>
+     <md-sidenav-container>
+    <div (click)="sidenav.close()" class="contentDiv">
+      <router-outlet></router-outlet>
+    </div>
+   </md-sidenav-container>

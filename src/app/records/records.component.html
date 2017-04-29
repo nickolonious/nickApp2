@@ -1,0 +1,7 @@
+<md-card class="recordCard" *ngFor="let record of records | async">
+  <md-card-content>
+    <img md-card-image src="{{record.image}}">
+      <h2>{{record.artist}}</h2>
+      <p>{{record.album}}</p>
+  </md-card-content>
+  </md-card>
