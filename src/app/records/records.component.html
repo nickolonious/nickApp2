@@ -1,7 +1,15 @@
-<md-card class="recordCard" *ngFor="let record of records | async">
+<md-toolbar color="white">
+   <md-icon>search</md-icon>
+  <md-input-container class="example-full-width">
+  <input mdInput type="search" [(ngModel)]='listFilter' placeholder="search by artist">
+</md-input-container>
+</md-toolbar>
+
+<md-card class="recordCard" *ngFor="let record of records | async | RecordSearchPipe:listFilter">
   <md-card-content>
     <img md-card-image src="{{record.image}}">
       <h2>{{record.artist}}</h2>
       <p>{{record.album}}</p>
   </md-card-content>
   </md-card>
+

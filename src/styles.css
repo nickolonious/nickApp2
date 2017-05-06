@@ -36,7 +36,7 @@ md-sidenav {
 }
 
 .contentDiv {
-    display: flex;
+   /* display: flex; */
     height: 100%;
     align-items: center;
     justify-content: center;

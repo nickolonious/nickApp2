@@ -15,12 +15,11 @@ import { MdDialog } from "@angular/material/";
 export class AppComponent {
 
   title = 'Nick works, for money...';  
-
+  
   constructor(public dialog: MdDialog) {}
   
   openDialog() {
     this.dialog.open(DialogComponent);
   }
-
 }
  
