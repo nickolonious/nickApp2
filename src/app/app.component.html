@@ -1,42 +1,46 @@
   <md-toolbar color="primary">
-   <div class="navToggle" (click)="sidenav.toggle()">
-      <md-icon>menu</md-icon>
-  </div>
-  <span style='margin-left: 20px;'>Nick Muscara</span>
-</md-toolbar>
-    <md-sidenav #sidenav mode="side"  >
-      <ul class="mainNav">         
-        <li (click)="sidenav.toggle()"  [routerLink]="['/app-home']">
-         <md-icon>home</md-icon>
-        Home</li>
-        <li (click)="sidenav.toggle()" [routerLink]="['/app-blog']">
+    <div id="navToggle" (click)="sidenav.toggle()">
+     <md-icon>menu</md-icon>
+    </div>
+  
+    &nbsp;<span style='position: relative;'>Nick Muscara</span>
+  </md-toolbar>
+  
+  <md-sidenav #sidenav mode="over">
+    <div>
+    <ul class="mainNav">         
+      <li (click)="sidenav.toggle()"  [routerLink]="['/app-home']">
+      <md-icon>home</md-icon>
+      Home</li>
+      <li (click)="sidenav.toggle()" [routerLink]="['/app-blog']">
         <md-icon>book</md-icon>
-        Blog</li>
-        <li (click)="sidenav.toggle()" [routerLink]="['/app-contact']">
-         <md-icon>phone in talk</md-icon>
-        Contact</li>
-        <li (click)="sidenav.toggle()" [routerLink]="['/app-aboutme']">
-         <md-icon>person</md-icon>
-        About Me</li>
-        <li (click)="sidenav.toggle()" [routerLink]="['/app-changelog']">
-          <md-icon>assignment</md-icon>
-        Changelog</li>
-        <li (click)="sidenav.toggle()" [routerLink]="['/app-records']">
-          <md-icon>headset</md-icon>
-        Records</li>
-        <li (click)="sidenav.toggle()" [routerLink]="['/app-wishlist']">
-          <md-icon>redeem</md-icon>
-        Wish List</li>
-         <li (click)="sidenav.toggle()" [routerLink]="['/app-pets']">
-          <md-icon>pets</md-icon>
-        Pets</li>
-         <li (click)="sidenav.toggle()" [routerLink]="['/app-bugs']">
-          <md-icon>bug_report</md-icon>
-        Bugs</li>
-      </ul>
-    </md-sidenav>
-     <md-sidenav-container>
+      Blog</li>
+      <li (click)="sidenav.toggle()" [routerLink]="['/app-contact']">
+        <md-icon>phone in talk</md-icon>
+      Contact</li>
+      <li (click)="sidenav.toggle()" [routerLink]="['/app-aboutme']">
+        <md-icon>person</md-icon>
+      About Me</li>
+      <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-changelog']">
+        <md-icon>assignment</md-icon>
+      Changelog</li>-->
+      <li (click)="sidenav.toggle()" [routerLink]="['/app-records']">
+        <md-icon>headset</md-icon>
+      Records</li>
+      <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-wishlist']">
+       <md-icon>redeem</md-icon>
+      Wish List</li>-->
+      <li (click)="sidenav.toggle()" [routerLink]="['/app-pets']">
+        <md-icon>pets</md-icon>
+      Pets</li>
+      <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-bugs']">
+        <md-icon>bug_report</md-icon>
+      Bugs</li>-->
+    </ul>
+    </div>
+  </md-sidenav>
+  <md-sidenav-container>
     <div (click)="sidenav.close()" class="contentDiv">
       <router-outlet></router-outlet>
     </div>
-   </md-sidenav-container>
+  </md-sidenav-container>

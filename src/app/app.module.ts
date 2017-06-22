@@ -22,6 +22,7 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { BugsComponent } from './bugs/bugs.component';
 import { RecordSearchPipe } from './records/record-search.pipe';
+import { SearchBox } from "app/records/search-box";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { RecordSearchPipe } from './records/record-search.pipe';
     DialogComponent,
     BugsComponent,
     RecordSearchPipe,
+    SearchBox
   ],
   entryComponents: [
     DialogComponent

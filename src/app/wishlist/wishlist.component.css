@@ -1,5 +1,12 @@
-.wishCard {
-    margin: 20px;
+
+.wishesContainer {
+	position: relative;
+	display: flex;
+	flex-flow: row wrap;  
 }
 
-
+.wish {
+	box-sizing: border-box;
+	margin: 0.75rem;
+	flex: 1;	
+}

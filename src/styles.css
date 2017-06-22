@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-@import '~https://fonts.googleapis.com/icon?family=Material+Icons'; 
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';  
 
 
 html, body, material-app, md-sidenav-container, .my-content {
@@ -12,23 +12,36 @@ html, body, material-app, md-sidenav-container, .my-content {
 
 md-sidenav {
   width: 200px;
+  transition: 0.2s;
 }
 
-.mainNav {
-    list-style: none;
-    margin: 20px 20px 20px 20px;
-    padding: 10px;
-    font-size: 17px;
-    font-weight: bold;
+body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+/*ul may not be needed*/
+
+.mainNav {
+    list-style: none;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
 .mainNav li {
-    margin: 10px;
+    margin-bottom: 1rem;
 }
 
 .mainNav li:hover {
-    cursor: pointer;   
+    cursor: pointer;
+    background-color:lightgray;
+    transition: .5s;   
+}
+
+.mainNav li:active {
+    background-color: lightgray;
 }
 
 .bodyClass {
@@ -41,3 +54,11 @@ md-sidenav {
     align-items: center;
     justify-content: center;
 }
+
+.contactCard {
+    width: 300px;
+    margin: auto;
+    margin-top: 10%;
+    display: block;
+}
+

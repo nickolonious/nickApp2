@@ -13,7 +13,8 @@ import { DialogComponent } from "app/dialog/dialog.component";
 
 
 const routes: Routes = [
-    { path: '', pathMatch:'full', redirectTo: 'home'},
+    { path: '', pathMatch:'full', redirectTo: 'app-home'},
+  
     { path: 'app-aboutme', component: AboutmeComponent },
     { path: 'app-blog', component: BlogComponent },
     { path: 'app-bugs', component: BugsComponent },

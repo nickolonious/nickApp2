@@ -4,10 +4,8 @@ import { IRecord } from "app/records/record";
 
 @Pipe({ name: 'RecordSearchPipe'})
 
-export class RecordSearchPipe implements PipeTransform {
-  transform(value: IRecord[], filterBy: string): IRecord[] {
-   filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
-   return filterBy ? value.filter((record: IRecord) =>
-    record.artist.toLocaleLowerCase().indexOf(filterBy) !== -1) : value;
+export class RecordSearchPipe {
+  PipeTransform(value, [term]) {
+    return value.filter((item) => item.title.startsWith(term));
   }
 }
