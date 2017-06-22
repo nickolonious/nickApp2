@@ -40,10 +40,6 @@ body {
     transition: .5s;   
 }
 
-.mainNav li:active {
-    background-color: lightgray;
-}
-
 .bodyClass {
     height: 100%;
 }

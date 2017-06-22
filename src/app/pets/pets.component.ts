@@ -15,7 +15,7 @@ export class PetsComponent implements OnInit {
   constructor(private af: AngularFire) { 
     
     this.pets = af.database.list('/pets', {
-    }).map((array) => array.reverse()) as FirebaseListObservable<any[]>;
+    }).map((array) => array.reverse()) as FirebaseListObservable<IPet[]>;
 
     this.pets.forEach(pets => {
       for(let pet of pets) {

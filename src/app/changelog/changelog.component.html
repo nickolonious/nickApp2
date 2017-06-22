@@ -1,6 +1,11 @@
 
-<md-card class="contactCard">
-  <md-card-content>
-    <p>Coming Soon!</p>
-  </md-card-content>
-</md-card>
+<div class="logsContainer">
+  <md-card class="log" *ngFor="let log of changeLogList">
+    <md-card-content>
+        <h1>{{log.title}}</h1>
+        <h1>{{log.date | date}}</h1>
+        <h3>{{log.version}}</h3>
+        <h3>{{log.description}}</h3>
+    </md-card-content>
+  </md-card>
+</div>
