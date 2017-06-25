@@ -11,7 +11,6 @@ export class ChangelogComponent implements OnInit {
 changelog: FirebaseListObservable<IChangelog[]>;
 changeLogList: IChangelog[]
   constructor(private af: AngularFire) { 
-
   this.changelog = af.database.list('/Changelog', {
   }).map((array) => array.reverse()) as FirebaseListObservable<IChangelog[]>;
   this.changelog.forEach(logs => {

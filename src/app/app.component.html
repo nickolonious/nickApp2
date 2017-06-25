@@ -1,11 +1,11 @@
   <md-toolbar color="primary">
     <div id="navToggle" (click)="sidenav.toggle()">
      <md-icon>menu</md-icon>
-    </div>
-  
-    &nbsp;<span style='position: relative;'>Nick Muscara</span>
+    </div> 
+    &nbsp;<span style='position: absolute;'>Nick Muscara</span>
   </md-toolbar>
   
+  <md-sidenav-container>
   <md-sidenav #sidenav mode="over">
     <div>
     <ul class="mainNav">         
@@ -22,9 +22,9 @@
         <md-icon>person</md-icon>
       About Me</li>
    
-      <li (click)="sidenav.toggle()" [routerLink]="['/app-records']">
+      <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-records']">
         <md-icon>headset</md-icon>
-      Records</li>
+      Records</li>-->
       <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-wishlist']">
        <md-icon>redeem</md-icon>
       Wish List</li>-->
@@ -34,14 +34,18 @@
       <li (click)="sidenav.toggle()" [routerLink]="['/app-changelog']">
         <md-icon>assignment</md-icon>
       Changelog</li>
+    
       <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-bugs']">
         <md-icon>bug_report</md-icon>
       Bugs</li>-->
     </ul>
     </div>
   </md-sidenav>
-  <md-sidenav-container>
     <div (click)="sidenav.close()" class="contentDiv">
       <router-outlet></router-outlet>
     </div>
   </md-sidenav-container>
+
+  <md-toolbar class="materialFooter">
+    <p>&#169; Nick Muscara 2017</p>
+  </md-toolbar>

@@ -12,7 +12,6 @@ export class WishlistComponent implements OnInit {
 
   constructor(private af: AngularFire) {
     this.wishlist = af.database.list('/WishList');
-    console.log(this.wishlist);
   }
 
   ngOnInit() {

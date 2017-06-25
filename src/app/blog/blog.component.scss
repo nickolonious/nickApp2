@@ -1,16 +1,25 @@
-
-
-.pageTitle {
-    text-align: center;
-}
-
-
 @mixin max-width($width) {
     @media screen and (max-width: $width) {
         @content;
     }
 }
 
+.blogContainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column; /* works with row or column */
+   flex-direction: column;
+   flex-flow: column wrap;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+.post {
+	box-sizing: border-box;
+	margin: 3rem;
+	flex: 1;
+}
 
 @include max-width(992px) {
 	.item {
@@ -24,16 +33,4 @@
 	}
 }
 
-
-.blogContainer {
-	position: relative;
-	display: flex;
-	flex-flow: row wrap;
-   
-}
-.post {
-	box-sizing: border-box;
-	margin: 2rem;
-	flex: 1;
-}
 

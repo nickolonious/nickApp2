@@ -18,7 +18,16 @@ export class BlogComponent implements OnInit {
 
   this.blog =  af.database.list('/Blog', {
   }).map((array) => array.reverse()) as FirebaseListObservable<IBlog[]>;
-  }
+  
+  this.blog.forEach(blog => {
+    for(let post of blog) {
+
+    }
+  });
+
+}
+
+
 
   ngOnInit() {
   }

@@ -19,8 +19,9 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
-/*ul may not be needed*/
+.pageTitle {
+    text-align: center;
+}
 
 .mainNav {
     list-style: none;
@@ -28,7 +29,6 @@ body {
     font-size: 17px;
     font-weight: bold;
 }
-
 
 .mainNav li {
     margin-bottom: 1rem;
@@ -57,4 +57,16 @@ body {
     margin-top: 10%;
     display: block;
 }
+
+  .materialFooter {
+      background-color:#3f51b5;
+      color: white;
+      font-weight: bold;
+      text-align: right;    
+    }
+
+    .materialFooter a {
+      color:black;
+      text-decoration: none;
+    }
 

@@ -5,18 +5,21 @@
 }
 
 .petsContainer {
-	position: relative;
-	display: flex;
-	flex-flow: row wrap;  
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column; /* works with row or column */
+   flex-direction: column;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
 }
 
 .pets {
 	box-sizing: border-box;
 	margin: 3rem;
 	flex: 1;
-	
 }
-
 
 @include max-width(992px) {
 	.pets {
