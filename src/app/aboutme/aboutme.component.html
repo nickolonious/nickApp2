@@ -2,11 +2,14 @@
   <h1>About Me</h1>
 </div>
 
+<div class="categoryTitle">
+  <h2>
+    Resume
+  </h2>
+</div>
+
 <md-card class="aboutCard">
-    <md-card-content>
-      <h2>
-        Resume
-      </h2>
+    <md-card-content> 
       <div id="buttonId"> 
         <button id="resumeButton" md-raised-button color="primary" 
           (click)="openDialog()">Open
@@ -15,11 +18,18 @@
     </md-card-content>
 </md-card>
 
-<!--<md-card class="aboutCard">
-    <md-card-content>
-      <h2>
-        Education
-      </h2>
-       <h3>{{education.degreeType}}</h3>
+
+<div class="categoryTitle">
+  <h2>
+    Education
+  </h2>
+</div>
+<md-card class="diplomaCard">
+    <md-card-content>  
+       <h1>{{ degrees?.uni }}</h1>
+       <h2>{{ degrees?.college }}</h2>
+       <h3>{{degrees?.degreeType }} </h3>
+       <h3>{{degrees?.degreeIn }}</h3>
+       <img md-card-image src="{{degrees?.image}}">   
     </md-card-content>
-</md-card>-->
+</md-card>

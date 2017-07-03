@@ -54,7 +54,7 @@ import { SearchBox } from "app/records/search-box";
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { 
 }

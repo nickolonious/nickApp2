@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BlogComponent } from './blog.component';
+import { MaterialModule } from "@angular/material";
+import { AngularFire, FirebaseListObservable } from "angularfire2";
+
 
 describe('BlogComponent', () => {
   let component: BlogComponent;
@@ -8,10 +10,18 @@ describe('BlogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlogComponent ]
+      declarations: [ BlogComponent ],
+        imports: [MaterialModule.forRoot()],
+        providers: [{BlogComponent, provide: AngularFire}]
     })
-    .compileComponents();
+      .compileComponents().then(() => {
+      fixture = TestBed.createComponent(BlogComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      });
   }));
+
+
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BlogComponent);

@@ -9,6 +9,7 @@ import "rxjs/add/operator/map";
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
+
 export class BlogComponent implements OnInit {
  public blog: FirebaseListObservable<IBlog[]>;
  
@@ -21,8 +22,8 @@ export class BlogComponent implements OnInit {
   
   this.blog.forEach(blog => {
     for(let post of blog) {
-
     }
+
   });
 
 }

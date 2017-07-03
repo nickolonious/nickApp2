@@ -12,7 +12,7 @@ changelog: FirebaseListObservable<IChangelog[]>;
 changeLogList: IChangelog[]
   constructor(private af: AngularFire) { 
   this.changelog = af.database.list('/Changelog', {
-  }).map((array) => array.reverse()) as FirebaseListObservable<IChangelog[]>;
+  });
   this.changelog.forEach(logs => {
     for(let log of logs) {
     
@@ -23,33 +23,58 @@ changeLogList: IChangelog[]
 
     if(log.postAge < 1){
       log.postAge = todaysDate.getMonth() - dateOfPost.getMonth();
-      log.postAgeString = log.postAge + " months ago";
-      if(log.postAge < 1) {
+      if(log.postAge === 1) {
+        log.postAgeString = log.postAge + " month ago";
+      }
+      else if (log.postAge > 1) {
+        log.postAgeString = log.postAge + " months ago";
+      }
+      else if(log.postAge < 1) {
         log.postAge = todaysDate.getDate() - dateOfPost.getDate();
-        log.postAgeString = log.postAge + " days ago";
-        if(log.postAge < 1) {
+        if(log.postAge === 1) {
+          log.postAgeString = log.postAge + " day ago";
+        }
+        else if(log.postAge > 1) {
+          log.postAgeString = log.postAge + " days ago";
+        }
+        else if(log.postAge < 1) {
           log.postAge = todaysDate.getHours() - dateOfPost.getHours();
-          log.postAgeString = log.postAge + " hours ago";
-          if(log.postAge < 1) {
+          if(log.postAge > 1) {
+            log.postAgeString = log.postAge + " hours ago";
+          }
+          else if(log.postAge === 1) {
+            log.postAgeString = log.postAge + " hour ago";
+          }
+          else if(log.postAge < 1) {
             log.postAge = todaysDate.getMinutes() - dateOfPost.getMinutes();
-            log.postAgeString = log.postAge + " minutes ago";
+            if(log.postAge > 1) {
+              log.postAgeString = log.postAge + " minutes ago";
+            }
+            else if(log.postAge === 1) {
+              log.postAgeString = log.postAge + " minute ago";
+            }
             if(log.postAge < 1) {
               log.postAge = todaysDate.getSeconds() - dateOfPost.getSeconds();
-              log.postAgeString = log.postAge + " seconds ago";
+              if(log.postAge === 1) {
+                log.postAgeString = log.postAge + " second ago";
+              }
+              else {
+                log.postAgeString = log.postAge + " seconds ago";
+              }
             }
           }
         }
       }
-    } else {
-      log.postAgeString = log.postAge + " years ago";
+    } else {     
+      log.postAgeString = (todaysDate.getFullYear() - dateOfPost.getFullYear()).toString(); 
     } 
     this.changeLogList = logs;
-
     };
   })
 }
 
   ngOnInit() {
-  }
+  
+}
 
 }

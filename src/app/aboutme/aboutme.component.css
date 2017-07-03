@@ -1,9 +1,34 @@
+@import '~https://fonts.googleapis.com/css?family=Pinyon+Script';
+
+
 .aboutCard {
     width: 50%;
     display: block;
-    margin: auto;
+    margin: 2rem auto 2rem auto;
+    text-align: center;
 }
+
+.categoryTitle{
+    text-align: center;
+}
+
+img {
+    width: 15rem;
+    display: block;
+    margin: 2rem auto 2rem auto;
+}
+
+.diplomaCard {
+    font-family: 'Pinyon Script', cursive;
+    font-weight: bold;
+    width: 50%;
+    display: block;
+    margin: 2rem auto 2rem auto;
+    text-align: center;
+}
+
 
 #buttonId {
     align-content: center;
 }
+

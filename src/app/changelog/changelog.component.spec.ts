@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChangelogComponent } from './changelog.component';
+import { MaterialModule } from "@angular/material";
+import { AngularFire } from "angularfire2";
 
 describe('ChangelogComponent', () => {
   let component: ChangelogComponent;
@@ -8,9 +10,16 @@ describe('ChangelogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChangelogComponent ]
+      declarations: [ ChangelogComponent ],
+      imports: [MaterialModule.forRoot()],
+      providers: [{ChangelogComponent, provide: AngularFire}]
+
     })
-    .compileComponents();
+      .compileComponents().then(() => {
+      fixture = TestBed.createComponent(ChangelogComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      });
   }));
 
   beforeEach(() => {
