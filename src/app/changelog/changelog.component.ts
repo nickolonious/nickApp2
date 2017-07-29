@@ -12,7 +12,8 @@ changelog: FirebaseListObservable<IChangelog[]>;
 changeLogList: IChangelog[]
   constructor(private af: AngularFire) { 
   this.changelog = af.database.list('/Changelog', {
-  }).map((array) => array.reverse()) as FirebaseListObservable<IChangelog[]>;;
+  }).map((array) => array.reverse()) as FirebaseListObservable<IChangelog[]>;
+  
   this.changelog.forEach(logs => {
     for(let log of logs) {
     

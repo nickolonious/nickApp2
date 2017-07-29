@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
+import { AngularFire } from "angularfire2";
+import { MaterialModule } from "@angular/material";
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -8,9 +10,15 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
+      declarations: [ ContactComponent ],
+      imports: [MaterialModule.forRoot()],
+      providers: [{ContactComponent, provide: AngularFire}]
     })
-    .compileComponents();
+    .compileComponents().then(() => {
+      fixture = TestBed.createComponent(ContactComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      });
   }));
 
   beforeEach(() => {

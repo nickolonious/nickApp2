@@ -25,7 +25,7 @@ export class PetsComponent implements OnInit {
         pet.age = todaysDate.getFullYear() - dateOfBirth.getFullYear();
         
         if(pet.age < 1) {
-          pet.age = todaysDate.getMonth() - dateOfBirth.getMonth();
+          pet.age = todaysDate.getMonth() - dateOfBirth.getMonth();        
           pet.ageString = pet.name + " is " + pet.age + " months old";
         }
         else{

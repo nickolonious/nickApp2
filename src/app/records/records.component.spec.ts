@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RecordsComponent } from './records.component';
+import { MaterialModule } from "@angular/material";
+import { AngularFire } from "angularfire2";
 
 describe('RecordsComponent', () => {
   let component: RecordsComponent;
@@ -8,9 +9,15 @@ describe('RecordsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecordsComponent ]
+      declarations: [ RecordsComponent ],
+      imports: [MaterialModule.forRoot()],
+      providers: [{RecordsComponent, provide: AngularFire}]
     })
-    .compileComponents();
+    .compileComponents().then(() => {
+      fixture = TestBed.createComponent(RecordsComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      });
   }));
 
   beforeEach(() => {

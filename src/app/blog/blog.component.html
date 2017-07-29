@@ -3,12 +3,14 @@
 </div>
 
 <div class="blogContainer">
-  <md-card class="post" *ngFor="let post of blog | async">
+  <md-card class="post" *ngFor="let post of blogList">
+    <div class="post">
     <md-card-content>
         <h1>{{post.title}}</h1>
         <img md-card-image src="{{post.image}}">
-        <h1>{{post.date | date}}</h1>
+        <h1>{{post.postAgeString}}</h1>
         <h3>{{post.body}}</h3>
     </md-card-content>
+    </div>
   </md-card>
 </div>

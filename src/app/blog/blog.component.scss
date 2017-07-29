@@ -16,9 +16,15 @@
    justify-content: center;
 }
 
+
+.blogContainer h3 {
+    max-width: 800px;
+}
+
 .post {
+    display: flex;
 	box-sizing: border-box;
-	margin: 3rem;
+	margin: 1rem;
 	flex: 1;
 }
 

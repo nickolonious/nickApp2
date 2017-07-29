@@ -14,8 +14,7 @@ describe('ChangelogComponent', () => {
       imports: [MaterialModule.forRoot()],
       providers: [{ChangelogComponent, provide: AngularFire}]
 
-    })
-      .compileComponents().then(() => {
+    }).compileComponents().then(() => {
       fixture = TestBed.createComponent(ChangelogComponent);
       component = fixture.componentInstance;
       fixture.detectChanges();
