@@ -14,9 +14,7 @@
 	box-sizing: border-box;
 	margin: 3rem;
 	flex: 1;
-	
 }
-
 
 @include max-width(992px) {
 	.log {

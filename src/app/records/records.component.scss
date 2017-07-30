@@ -13,7 +13,6 @@
     }
 }
 
-
 .recordsContainer {
 	position: relative;
 	display: flex;
@@ -24,7 +23,7 @@
 	box-sizing: border-box;
 	margin: 0.75rem;
 	flex: 1;
-	
+	flex-basis: 20%;
 }
 
 .img {
