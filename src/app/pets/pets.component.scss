@@ -13,7 +13,6 @@
    align-items: center;
    -webkit-justify-content: center;
    justify-content: center;
-
 }
 
 .pets {
@@ -33,3 +32,29 @@
 		flex-basis: 50%;
 	}
 }
+
+/* Header */
+.component-page-header {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 2000px) {
+    padding-left: 0;
+  }
+}
+
+h1 {
+  @media (max-width: 2000px) {
+    padding: 24px 8px;
+    font-size: 20px;
+  }
+}
+
+ .docs-primary-header {
+    background: #3f51b5;
+
+    h1 {
+      margin: 1rem;
+      color:white;
+    }
+  }
