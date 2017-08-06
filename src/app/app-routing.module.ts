@@ -25,6 +25,8 @@ const routes: Routes = [
     { path: 'app-pets', component: PetsComponent },
     { path: 'app-records', component: RecordsComponent },
     { path: 'app-wishlist', component: WishlistComponent }
+
+    
 ];
 
 @NgModule({

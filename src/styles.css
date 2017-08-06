@@ -1,10 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';  
 @import 'https://fonts.googleapis.com/css?family=Pinyon+Script';
-
 
 html, body, material-app, md-sidenav-container, .my-content {
   margin: 0;
@@ -64,12 +62,10 @@ body {
     background-color:lightblue;
     color: black;
     font-family: 'Roboto', sans-serif;
+    font-size: 8px;
 }
 
 .materialFooter a {
     color:black;
     text-decoration: none;      
 }
-
-
-

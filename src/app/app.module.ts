@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { firebaseConfig } from './../environments/firebase.config';
-
+import { GitHub } from 'github-api';
 import 'hammerjs/hammer';
 
 import { AboutmeComponent } from './aboutme/aboutme.component';
