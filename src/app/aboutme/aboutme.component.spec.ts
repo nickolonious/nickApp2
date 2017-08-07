@@ -14,8 +14,6 @@ describe('AboutmeComponent', () => {
         MaterialModule.forRoot(),
       ],
       providers: [{AboutmeComponent, provide: AngularFire}]
-
-
     })
     .compileComponents().then(() => {
       fixture = TestBed.createComponent(AboutmeComponent);

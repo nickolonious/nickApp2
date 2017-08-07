@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ChangelogComponent } from './changelog.component';
 import { MaterialModule } from "@angular/material";
 import { AngularFire } from "angularfire2";

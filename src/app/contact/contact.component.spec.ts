@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ContactComponent } from './contact.component';
 import { AngularFire } from "angularfire2";
 import { MaterialModule } from "@angular/material";

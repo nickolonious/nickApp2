@@ -21,8 +21,6 @@ describe('BlogComponent', () => {
       });
   }));
 
-
-
   beforeEach(() => {
     fixture = TestBed.createComponent(BlogComponent);
     component = fixture.componentInstance;

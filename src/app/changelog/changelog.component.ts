@@ -73,9 +73,6 @@ changeLogList: IChangelog[]
     };
   })
 }
-
-  ngOnInit() {
-  
-}
-
+  ngOnInit() {   
+  }
 }

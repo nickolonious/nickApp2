@@ -9,7 +9,6 @@ import { NgModule } from '@angular/core';
 import { firebaseConfig } from './../environments/firebase.config';
 import { GitHub } from 'github-api';
 import 'hammerjs/hammer';
-
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';

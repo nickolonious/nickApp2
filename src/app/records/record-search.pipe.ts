@@ -1,7 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { IRecord } from "app/records/record";
 
-
 @Pipe({ name: 'RecordSearchPipe'})
 
 export class RecordSearchPipe {

@@ -11,7 +11,6 @@ import { RecordsComponent } from "app/records/records.component";
 import { WishlistComponent } from "app/wishlist/wishlist.component";
 import { DialogComponent } from "app/dialog/dialog.component";
 
-
 const routes: Routes = [
     { path: '', pathMatch:'full', redirectTo: 'app-home'},
   
@@ -25,8 +24,6 @@ const routes: Routes = [
     { path: 'app-pets', component: PetsComponent },
     { path: 'app-records', component: RecordsComponent },
     { path: 'app-wishlist', component: WishlistComponent }
-
-    
 ];
 
 @NgModule({
@@ -35,5 +32,4 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule { 
-  
 }
