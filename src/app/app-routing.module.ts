@@ -10,6 +10,7 @@ import { PetsComponent } from "app/pets/pets.component";
 import { RecordsComponent } from "app/records/records.component";
 import { WishlistComponent } from "app/wishlist/wishlist.component";
 import { DialogComponent } from "app/dialog/dialog.component";
+import { LabsComponent } from "app/labs/labs.component";
 
 const routes: Routes = [
     { path: '', pathMatch:'full', redirectTo: 'app-home'},
@@ -21,9 +22,11 @@ const routes: Routes = [
     { path: 'app-contact', component: ContactComponent },
     { path: 'app-dialog', component: DialogComponent },
     { path: 'app-home', component: HomeComponent },
+    { path: 'app-labs', component: LabsComponent},
     { path: 'app-pets', component: PetsComponent },
     { path: 'app-records', component: RecordsComponent },
     { path: 'app-wishlist', component: WishlistComponent }
+  
 ];
 
 @NgModule({

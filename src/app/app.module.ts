@@ -22,6 +22,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { BugsComponent } from './bugs/bugs.component';
 import { RecordSearchPipe } from './records/record-search.pipe';
 import { SearchBox } from "app/records/search-box";
+import { LabsComponent } from './labs/labs.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SearchBox } from "app/records/search-box";
     DialogComponent,
     BugsComponent,
     RecordSearchPipe,
-    SearchBox
+    SearchBox,
+    LabsComponent
   ],
   entryComponents: [
     DialogComponent
