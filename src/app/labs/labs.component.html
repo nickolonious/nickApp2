@@ -16,7 +16,7 @@
   <md-card>
     <md-card-content>
       <h1>Geolocation Api</h1>
-        <button (click)="getLocation()" id="get_location">Get Location</button>
+        <button color="primary" md-raised-button (click)="getLocation()" id="get_location">Get Location</button>
         <br/>
         <br/>
         <div id="map">
@@ -25,9 +25,9 @@
         </div>
         <div id="geolocationData"></div>
         <div class="geoResults">
-          <h4>{{location.latitude}}</h4>
-          <h4>{{location.longitude}}</h4>
-          <h4>{{location.accuracy}}</h4>
+          <h4>Latitude: {{location.latitude}}</h4>
+          <h4>Longitude: {{location.longitude}}</h4>
+          <h4>Accuracy(in meters): {{location.accuracy}}</h4>
           <h4>{{location.altitude}}</h4>
           <h4>{{location.altitudeAccuracy}}</h4>
           <h4>{{location.heading}}</h4>
