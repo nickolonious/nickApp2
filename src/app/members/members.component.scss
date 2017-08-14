@@ -1,0 +1,78 @@
+#toolbar {
+    padding:0;
+    width:70%;
+    margin-left:-35%;
+}
+
+header {
+    background:#3B8598;
+    width:100%;
+}
+
+.basic-btn {
+    width:100px;
+    margin:0;
+}
+
+#page {
+    padding:3em;
+    margin:0;
+}
+
+#page img {
+    margin-top:30px;
+}
+
+h2 {
+    margin:0;
+}
+
+
+@media (max-width: 600px) {
+    #page {
+        padding:1em;
+    }
+    #toolbar {
+        width:90%;
+        margin-left: -45%;
+    }
+}
+
+
+.memberContainer {
+   margin-top: 1rem;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column; /* works with row or column */
+   flex-direction: column;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+/* Header */
+.component-page-header {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 2000px) {
+    padding-left: 0;
+  }
+}
+
+h1 {
+  @media (max-width: 2000px) {
+    padding: 24px 8px;
+    font-size: 20px;
+  }
+}
+
+ .docs-primary-header {
+    background: #3f51b5;
+
+    h1 {
+      margin: 1rem;
+      color:white;
+    }
+  }

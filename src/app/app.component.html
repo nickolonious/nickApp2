@@ -2,13 +2,17 @@
     <div id="navToggle" (click)="sidenav.toggle()">
      <md-icon>menu</md-icon>
     </div> 
-    &nbsp;<span style='position: absolute;'>Nick Muscara</span>
+    &nbsp;<span style='position: relative;'>Nick Muscara</span>
+       
   </md-toolbar>
   
   <md-sidenav-container>
     <md-sidenav #sidenav mode="over">
       <div>
         <ul class="mainNav">         
+          <li (click)="sidenav.toggle()"  [routerLink]="['/app-login']">
+            <md-icon>person outline</md-icon>
+          Log In</li>
           <li (click)="sidenav.toggle()"  [routerLink]="['/app-home']">
             <md-icon>home</md-icon>
           Home</li>
@@ -36,9 +40,7 @@
           <li (click)="sidenav.toggle()" [routerLink]="['/app-changelog']">
             <md-icon>assignment</md-icon>
           Changelog</li>
-          <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-bugs']">
-            <md-icon>bug_report</md-icon>
-          Bugs</li>-->
+       
         </ul>
       </div>
     </md-sidenav>

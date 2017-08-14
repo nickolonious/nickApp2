@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutmeComponent } from "app/aboutme/aboutme.component";
 import { BlogComponent } from "app/blog/blog.component";
@@ -11,8 +11,13 @@ import { RecordsComponent } from "app/records/records.component";
 import { WishlistComponent } from "app/wishlist/wishlist.component";
 import { DialogComponent } from "app/dialog/dialog.component";
 import { LabsComponent } from "app/labs/labs.component";
+import { LoginComponent } from "app/login/login.component";
+import { SignupComponent } from "app/signup/signup.component";
+import { MembersComponent } from "app/members/members.component";
+import { EmailComponent } from "app/email/email.component";
+import { AuthGuard } from "app/services/auth.service";
 
-const routes: Routes = [
+const router: Routes = [
     { path: '', pathMatch:'full', redirectTo: 'app-home'},
   
     { path: 'app-aboutme', component: AboutmeComponent },
@@ -25,12 +30,17 @@ const routes: Routes = [
     { path: 'app-labs', component: LabsComponent},
     { path: 'app-pets', component: PetsComponent },
     { path: 'app-records', component: RecordsComponent },
-    { path: 'app-wishlist', component: WishlistComponent }
-  
+    { path: 'app-wishlist', component: WishlistComponent },
+    { path: 'app-login', component: LoginComponent },
+    { path: 'app-signup', component: SignupComponent },
+    { path: 'app-email', component: EmailComponent },
+    { path: 'app-members', component: MembersComponent, canActivate: [AuthGuard] }
 ];
 
+export const routes: ModuleWithProviders = RouterModule.forRoot(router);
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(router)],
   exports: [RouterModule]
 })
 

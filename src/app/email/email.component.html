@@ -1,0 +1,20 @@
+<div class="docs-primary-header component-page-header">
+  <h1>Email</h1>
+</div>
+
+<div class="emailContainer">
+  <md-card>
+    <a routerLink="/app-login" id="goback">Go back</a>
+    <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+    <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+      <md-input-container>
+        <input mdInput type="text" placeholder="Email address.." (ngModel)="email" name="email" required>
+      </md-input-container>
+      <md-input-container>
+        <input mdInput type="password" placeholder="Password" (ngModel)="password" name="password" required>
+      </md-input-container>
+      <button md-raised-button color="primary" type="submit" [disabled]="!formData.valid">Log in</button>
+      <a routerLink="/app-signup" class="alc">Don't have an account?</a>
+    </form>
+  </md-card>
+</div>

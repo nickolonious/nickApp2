@@ -1,0 +1,12 @@
+<div class="docs-primary-header component-page-header">
+  <h1>Profile</h1>
+</div>
+
+<div class="memberContainer">
+  <md-card>
+    <div id="page" [@moveInLeft]="state">
+      <h2>Hey {{ name.auth.displayName }}!</h2>
+    </div> 
+    <button color="primary" md-raised-button (click)="logout()">Logout</button>
+  </md-card>
+</div>

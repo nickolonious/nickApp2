@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { firebaseConfig } from './../environments/firebase.config';
 import { GitHub } from 'github-api';
+import { AuthGuard } from './services/auth.service';
 import 'hammerjs/hammer';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { AppComponent } from './app.component';
@@ -23,6 +24,10 @@ import { BugsComponent } from './bugs/bugs.component';
 import { RecordSearchPipe } from './records/record-search.pipe';
 import { SearchBox } from "app/records/search-box";
 import { LabsComponent } from './labs/labs.component';
+import { LoginComponent } from './login/login.component';
+import { EmailComponent } from './email/email.component';
+import { MembersComponent } from './members/members.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,11 @@ import { LabsComponent } from './labs/labs.component';
     BugsComponent,
     RecordSearchPipe,
     SearchBox,
-    LabsComponent
+    LabsComponent,
+    LoginComponent,
+    EmailComponent,
+    MembersComponent,
+    SignupComponent
   ],
   entryComponents: [
     DialogComponent
@@ -54,7 +63,7 @@ import { LabsComponent } from './labs/labs.component';
     AngularFireModule.initializeApp(firebaseConfig)
 
   ],
-  providers: [],
+  providers: [ AuthGuard ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { 

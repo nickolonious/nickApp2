@@ -1,0 +1,16 @@
+<div class="docs-primary-header component-page-header">
+  <h1>Login</h1>
+</div>
+
+  <div class="loginContainer">
+    <md-card>
+    <img src="../../assets/lock.svg" id="lock">
+      <span class="error" *ngIf="error">{{ error }}</span>
+
+      <button md-raised-button  (click)="loginFb()" id="fb">Login with Facebook</button>
+      <button style="margin-top:1rem;" md-raised-button  (click)="loginGoogle()" id="gmail">Login with Google</button>
+      <button style="margin-top:1rem;" md-raised-button  routerLink="/app-email" id="email">Email</button>
+    </md-card>
+    
+    <a routerLink="/app-signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+    </div>

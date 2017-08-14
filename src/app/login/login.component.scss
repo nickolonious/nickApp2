@@ -1,0 +1,83 @@
+#lock {
+    width:40%;
+    margin: 1.5em auto 4em auto;
+    display:block;
+}
+
+#fb {
+    background:#3B5998 url('../../assets/facebook.svg') no-repeat 14px 6px;
+    background-position-y: -11px;
+    background-size: 47px;
+    color:#fff;
+}
+
+#google {
+    border: 1px solid #95989A;
+    background: #fff  url('../../assets/google.svg') no-repeat 25px;
+    background-size: 100px;
+} 
+
+#email {
+    background: #ECECEC  url('../../assets/email.svg') no-repeat 25px;
+    background-size: 25px;
+}
+
+@media (max-width: 600px) {
+    #page {
+        padding:1em;
+    }
+    #toolbar {
+        width:90%;
+        margin-left: -45%;
+    }
+    #fb {
+        background:#3B5998;
+    }
+
+    #google {
+        background: #fff;
+    }
+
+    #email {
+        background: #ECECEC;
+    }
+}
+
+.loginContainer {
+   margin-top: 1rem;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column; /* works with row or column */
+   flex-direction: column;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+
+/* Header */
+.component-page-header {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 2000px) {
+    padding-left: 0;
+  }
+}
+
+h1 {
+  @media (max-width: 2000px) {
+    padding: 24px 8px;
+    font-size: 20px;
+  }
+}
+
+ .docs-primary-header {
+    background: #3f51b5;
+
+    h1 {
+      margin: 1rem;
+      color:white;
+    }
+  }
