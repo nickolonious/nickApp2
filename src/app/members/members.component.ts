@@ -21,7 +21,6 @@ export class MembersComponent implements OnInit {
     this.af.auth.subscribe(auth => {
       if(auth) {
         this.name = auth;
-        console.log(this.name);
         if(this.name.google) {
           this.provider =  "auth provider: Google";
           this.picture = this.name.auth.photoURL;
@@ -33,7 +32,6 @@ export class MembersComponent implements OnInit {
           this.picture = "../../assets/profile.svg";
         }
         if(this.name.auth.photoURL == null) {
-          console.log(this.name.auth.photoUrl);
         }
       
       }
@@ -44,7 +42,6 @@ export class MembersComponent implements OnInit {
 
   logout() {
      this.af.auth.logout();
-    // console.log('logged out');
      this.router.navigateByUrl('/app-login');
   }
 

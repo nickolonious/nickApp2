@@ -25,7 +25,6 @@ export class EmailComponent implements OnInit {
 
   onSubmit(formData) {
     if(formData.valid) {
-   //   console.log(formData.value);
       this.af.auth.login({
         email: formData.value.email,
         password: formData.value.password
@@ -35,11 +34,9 @@ export class EmailComponent implements OnInit {
         method: AuthMethods.Password,
       }).then(
         (success) => {
-     //   console.log(success);
         this.router.navigate(['/app-members']);
       }).catch(
         (err) => {
-     //   console.log(err);
         this.error = err;
       })
     }

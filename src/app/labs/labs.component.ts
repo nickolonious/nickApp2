@@ -34,7 +34,6 @@ export class LabsComponent implements OnInit {
 
   setPosition(position){
     this.location = position.coords;
-   // console.log(this.location);
     this.latitude = "Latitude: " + this.location.latitude;
     this.longitude = "Longitude: " + this.location.longitude;
     this.accuracy = "Accuracy: " + this.location.accuracy;
