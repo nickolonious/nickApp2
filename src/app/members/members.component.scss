@@ -38,6 +38,14 @@ h2 {
     }
 }
 
+.profilePicture img {
+     display:block; 
+     border: black solid 5px; 
+     border-radius:5px; 
+     margin:auto; 
+     width: 150px; 
+     height: 150px;
+}
 
 .memberContainer {
    margin-top: 1rem;

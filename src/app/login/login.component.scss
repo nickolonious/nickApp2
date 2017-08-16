@@ -1,25 +1,27 @@
 #lock {
-    width:40%;
+    width:30%;
     margin: 1.5em auto 4em auto;
     display:block;
 }
 
 #fb {
-    background:#3B5998 url('../../assets/facebook.svg') no-repeat 14px 6px;
-    background-position-y: -11px;
-    background-size: 47px;
+   /* background:#3B5998 url('../../assets/facebook.svg') no-repeat 14px 6px; */
     color:#fff;
+    background: #3B5998
 }
 
 #google {
     border: 1px solid #95989A;
-    background: #fff  url('../../assets/google.svg') no-repeat 25px;
-    background-size: 100px;
+  /* background: #fff  url('../../assets/google.svg') no-repeat 25px;*/
+      background: #fff
+
 } 
 
 #email {
-    background: #ECECEC  url('../../assets/email.svg') no-repeat 25px;
+   /* background: #ECECEC  url('../../assets/email.svg') no-repeat 25px; */
     background-size: 25px;
+        background: #ECECEC;
+
 }
 
 @media (max-width: 600px) {
@@ -44,7 +46,6 @@
 }
 
 .loginContainer {
-   margin-top: 1rem;
    display: -webkit-flex;
    display: flex;
    -webkit-flex-direction: column; /* works with row or column */
@@ -53,14 +54,13 @@
    align-items: center;
    -webkit-justify-content: center;
    justify-content: center;
+   margin: 1rem;
 }
-
 
 /* Header */
 .component-page-header {
   display: flex;
   align-items: center;
-
   @media (max-width: 2000px) {
     padding-left: 0;
   }
@@ -81,3 +81,11 @@ h1 {
       color:white;
     }
   }
+
+ .signupInputContainer {
+     width: 100%;
+ }
+
+#goBackDiv {
+    margin-top: 5rem;
+}

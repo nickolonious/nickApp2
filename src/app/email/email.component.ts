@@ -18,14 +18,14 @@ export class EmailComponent implements OnInit {
     constructor(public af: AngularFire,private router: Router) {
       this.af.auth.subscribe(auth => { 
         if(auth) {
-          this.router.navigateByUrl('/members');
+          this.router.navigateByUrl('/app-members');
         }
       });
   }
 
   onSubmit(formData) {
     if(formData.valid) {
-      console.log(formData.value);
+   //   console.log(formData.value);
       this.af.auth.login({
         email: formData.value.email,
         password: formData.value.password
@@ -35,11 +35,11 @@ export class EmailComponent implements OnInit {
         method: AuthMethods.Password,
       }).then(
         (success) => {
-        console.log(success);
-        this.router.navigate(['/members']);
+     //   console.log(success);
+        this.router.navigate(['/app-members']);
       }).catch(
         (err) => {
-        console.log(err);
+     //   console.log(err);
         this.error = err;
       })
     }

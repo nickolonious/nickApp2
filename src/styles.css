@@ -76,7 +76,6 @@ body {
 
 /* Angular Auth Code */
 
-
 .form-container {
     background:white;
     padding:3.5em;
@@ -119,9 +118,9 @@ h2 {
 .error {
     background:#f1f0ef;
     padding:1em;
-    width:100%;
     display:block;
     margin-bottom:20px;
+    border-radius: 5px;
 }
 
 #goback {

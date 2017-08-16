@@ -5,8 +5,15 @@
 <div class="memberContainer">
   <md-card>
     <div id="page" [@moveInLeft]="state">
-      <h2>Hey {{ name.auth.displayName }}!</h2>
+      <div class="profilePicture">
+        <img [src]="picture"/> 
+      </div>
+      <div style="margin:1.5rem;" class="profileInfo">
+        <h2>{{ name.auth.displayName }}</h2>
+        <h4>{{ name.auth.email }} </h4>
+        <h4>{{ provider }}</h4>
+      </div>
+      <button color="primary" md-raised-button (click)="logout()">Logout</button>
     </div> 
-    <button color="primary" md-raised-button (click)="logout()">Logout</button>
   </md-card>
 </div>

@@ -3,7 +3,6 @@ import { AngularFire, FirebaseListObservable } from "angularfire2";
 import { IBlog } from './blog';
 import "rxjs/add/operator/map";
 
-
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -19,12 +18,11 @@ export class BlogComponent implements OnInit {
   }).map((array) => array.reverse()) as FirebaseListObservable<IBlog[]>;
 
   this.blog.forEach(posts => {
-    for(let post of posts) {
-       
-       let todaysDate = new Date();
-       let dateOfPost = new Date(post.date);
+    for(let post of posts) { 
+      let todaysDate = new Date();
+      let dateOfPost = new Date(post.date);
 
-       post.postAge = todaysDate.getFullYear() - dateOfPost.getFullYear();
+      post.postAge = todaysDate.getFullYear() - dateOfPost.getFullYear();
 
       if(post.postAge < 1){
         post.postAge = todaysDate.getMonth() - dateOfPost.getMonth();
@@ -72,16 +70,11 @@ export class BlogComponent implements OnInit {
       }
     } else {     
       post.postAgeString = (todaysDate.getFullYear() - dateOfPost.getFullYear()).toString(); 
-    }
-    
-    this.blogList = posts;
-    
-    console.log(this.blogList);
+    }   
+    this.blogList = posts;    
     };
   })
 }
-
-
 
   ngOnInit() {
   }

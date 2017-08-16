@@ -11,8 +11,20 @@
 }
 
 .log {
+  box-sizing: border-box;
+	margin: 1rem;
+	flex: 1;
+}
+
+.log:first-child {
 	box-sizing: border-box;
-	margin: 3rem;
+	margin-top: 3rem;
+	flex: 1;
+}
+
+.log:last-child {
+  box-sizing: border-box;
+	margin-bottom: 3rem;
 	flex: 1;
 }
 

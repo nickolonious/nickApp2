@@ -13,13 +13,31 @@ import { moveIn, fallIn, moveInLeft } from '../router.animations';
 export class MembersComponent implements OnInit {
   name: any;
   state: string = '';
+  provider: string = "";
+  picture: string = "";
 
   constructor(public af: AngularFire,private router: Router) {
 
     this.af.auth.subscribe(auth => {
       if(auth) {
         this.name = auth;
+        console.log(this.name);
+        if(this.name.google) {
+          this.provider =  "auth provider: Google";
+          this.picture = this.name.auth.photoURL;
+        } else if (this.name.facebook) {
+          this.provider = "auth provider: Facebook";
+          this.picture = this.name.auth.photoURL;
+        } else {
+          this.provider = " auth provider: Email";
+          this.picture = "../../assets/profile.svg";
+        }
+        if(this.name.auth.photoURL == null) {
+          console.log(this.name.auth.photoUrl);
+        }
+      
       }
+      
     });
 
   }
