@@ -3,18 +3,40 @@
 </div>
 
 <div class="emailContainer">
-  <md-card>
-    <a routerLink="/app-login" id="goback">Go back</a>
+  <md-card style="width:95%; max-width: 600px;" class="email">
+    <md-card-content>
     <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
     <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
       <md-input-container>
         <input mdInput type="text" placeholder="Email address.." (ngModel)="email" name="email" required>
       </md-input-container>
+      <br />
       <md-input-container>
         <input mdInput type="password" placeholder="Password" (ngModel)="password" name="password" required>
       </md-input-container>
+      <br />
+      <md-input-container>
+        <input mdInput type="text" placeholder="First Name" (ngModel)="firstName" name="firstName" required>
+      </md-input-container>
+      <br />
+      <md-input-container>
+        <input mdInput type="text" placeholder="Last Name" (ngModel)="lastName" name="lastName" required>
+      </md-input-container>
+      <br />
+      <md-select placeholder="How do you know Nick?" [(ngModel)]="selectedValue" name="association">
+        <md-option *ngFor="let assoc of association" [value]="assoc.type">
+          {{ assoc.type }}
+        </md-option>
+      </md-select>
+      <br />
+      <br />
+      <br />
+      <br />
       <button md-raised-button color="primary" type="submit" [disabled]="!formData.valid">Log in</button>
       <a routerLink="/app-signup" class="alc">Don't have an account?</a>
+      <br />
+      <a routerLink="/app-login" id="goback">Go back</a>      
     </form>
+    </md-card-content>
   </md-card>
 </div>

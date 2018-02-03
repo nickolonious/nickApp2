@@ -1,9 +1,10 @@
 <div class="wishesContainer">
-  <md-card class="wish" *ngFor="let wish of wishlist">
+  <md-card class="wish" *ngFor="let wish of wishlistList">
     <md-card-content>
       <img md-card-image src="{{wish.image}}">
         <h2>{{wish.name}}</h2>
         <p>{{wish.price}}</p>
+        <a href="{{wish.link}}">{{wish.linkTitle}}</a>
     </md-card-content>
   </md-card>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from "angularfire2";
+import { IWishList } from "app/wishlist/wishlist";
 
 @Component({
   selector: 'app-wishlist',
@@ -7,11 +8,18 @@ import { AngularFire, FirebaseListObservable } from "angularfire2";
   styleUrls: ['./wishlist.component.css']
 })
 export class WishlistComponent implements OnInit {
-
- wishlist: FirebaseListObservable<any[]>;
+ public wishlist: FirebaseListObservable<IWishList[]>;
+ public wishlistList: IWishList[];
 
   constructor(private af: AngularFire) {
     this.wishlist = af.database.list('/WishList');
+
+    this.wishlist.forEach(wishes => {
+      this.wishlistList = wishes;      
+    })
+
+;    
+
   }
 
   ngOnInit() {

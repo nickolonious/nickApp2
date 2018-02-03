@@ -11,9 +11,9 @@ import { moveIn, fallIn } from '../router.animations';
   host: {'[@moveIn]': ''}
 })
 export class EmailComponent implements OnInit {
-
     state: string = '';
     error: any;
+    selectedValue: string;
 
     constructor(public af: AngularFire,private router: Router) {
       this.af.auth.subscribe(auth => { 
@@ -41,6 +41,14 @@ export class EmailComponent implements OnInit {
       })
     }
   }
+
+  association = [
+    { value: 0, type: 'Friend'},
+    { value: 1, type: 'Family'},
+    { value: 3, type: 'Work'},
+    { value: 4, type: 'Client'},
+    { value: 5, type: 'Other' }
+  ];
 
   ngOnInit() {
   }

@@ -7,6 +7,7 @@
   </md-toolbar>
   
   <md-sidenav-container>
+    
     <md-sidenav #sidenav mode="over">
       <div>
         <ul class="mainNav">         
@@ -25,13 +26,7 @@
           <li (click)="sidenav.toggle()" [routerLink]="['/app-aboutme']">
             <md-icon>person</md-icon>
           About Me</li>
-          <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-records']">
-            <md-icon>headset</md-icon>
-          Records</li>-->
-          <!--<li (click)="sidenav.toggle()" [routerLink]="['/app-wishlist']">
-            <md-icon>redeem</md-icon>
-          Wish List</li>-->
-           <li (click)="sidenav.toggle()" [routerLink]="['/app-labs']">
+          <li (click)="sidenav.toggle()" [routerLink]="['/app-labs']">
             <md-icon>extension</md-icon>
           Labs</li>
           <li (click)="sidenav.toggle()" [routerLink]="['/app-pets']">
@@ -39,14 +34,18 @@
           Pets</li>
           <li (click)="sidenav.toggle()" [routerLink]="['/app-changelog']">
             <md-icon>assignment</md-icon>
-          Changelog</li>      
+          Changelog</li>
+          <li (click)="sidenav.toggle()" [routerLink]="['/app-wishlist']">
+            <md-icon>format_list_numbered</md-icon>
+          Wishlist</li>           
         </ul>
       </div>
     </md-sidenav>
-    
+
     <div (click)="sidenav.close()" class="contentDiv">
       <router-outlet></router-outlet>
     </div>
+
   </md-sidenav-container>
 
   <md-toolbar class="materialFooter">
